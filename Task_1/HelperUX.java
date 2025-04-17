@@ -1,13 +1,16 @@
 package Task_1;
 
 public class HelperUX {
+    //Worning variables
+    public final String PlayerNameEmpty = "Oops! Player name can't be empty";
+
     public String greetings (){
         return "********************************************************************************************************************************\n" +
-                "--------------------------------- Hello Can we play Number Guessing Game !! ---------------------------------------------------\n" +
+                "--------------------------------- Hello! \uD83D\uDE01 Welcome to Number Guessing Game !! ---------------------------------------------------\n" +
                 "*******************************************************************************************************************************" +
                 "\n";
     }
     public String askingForname(){
-        return "    ►  Can I know your Name ?";
+        return "    \uD83D\uDC49 Can I know your Name  \uD83E\uDD14 ?";
     }
 }

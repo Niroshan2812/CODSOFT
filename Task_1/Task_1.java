@@ -8,17 +8,16 @@ public class Task_1 {
         Scanner sc = new Scanner(System.in);
         HelperUX ux = new HelperUX();
         System.out.println(" "+ ux.greetings());
-        System.out.println(" "+ ux.askingForname());
-        String playerName = sc.nextLine();
-        if(playerName.equals("")){
-            System.out.println("Player name is empty");
+       String playerName = "";
+       do{
+           System.out.println(" "+ ux.askingForname());
+           playerName = sc.nextLine();
+           if(playerName.equals("")){
+               System.out.println(" "+ ux.PlayerNameEmpty);
+           }
+       }while (playerName.trim().isEmpty());
 
-        }else {
-            System.out.println("Player name is "+playerName);
-        }
-            Player player =  new Player(playerName);
-
-
+       Player player =  new Player(playerName);
 
         int min=1;
         int max = 100;
