@@ -33,7 +33,10 @@ public class Task_2 {
                 System.out.println(ux.invalidMarkInput);
 
             }
+            student.addSubject(subjectName, marks);
 
         }
+        student.resultSys();
+        sc.close();
     }
 }
