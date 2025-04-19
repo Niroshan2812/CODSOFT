@@ -9,6 +9,7 @@ public class Task_1 {
         HelperUX ux = new HelperUX();
         System.out.println(" "+ ux.greetings());
        String playerName = "";
+       //Check player name is empty or not
        do{
            System.out.println(" "+ ux.askingForname());
            playerName = sc.nextLine();
@@ -19,6 +20,7 @@ public class Task_1 {
 
        Player player =  new Player(playerName);
 
+       //Assigning numbers
         int min=1;
         int max = 100;
         int maxAttemps = 5;
@@ -30,11 +32,11 @@ public class Task_1 {
 
         do{
             game.setRound(round ++);
-            System.out.println("Do you want to play again ? (Yes/ No)");
+            System.out.println(ux.playerStatues());
             playAgain = sc.nextLine();
 
         }while(playAgain.equalsIgnoreCase("Yes"));
-        System.out.println("\n Thanks for playing !!!"+ player.getName() + "Your final Score is "+ player.getScore());
+        System.out.println(ux.thanking+ player.getName() + "Your final Score is "+ player.getScore());
         sc.close();
 
 

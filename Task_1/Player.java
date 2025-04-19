@@ -14,6 +14,7 @@ public class Player {
     public int getScore() {
         return score;
     }
+    //Add score to existing score
    public void addScore(int points){
         this.score += points;
    }

@@ -6,52 +6,88 @@ public class Game {
     private final Player player;
     private final NumberGenerator numberGenerator;
     private final int maxAttempts;
-    private final Scanner scanner;
+    private final Scanner sc;
+    private final HelperUX ux;
+    private boolean help;
+    private int targetNumber;
+
 
     public Game(Player player, int min, int max, int maxAttempts) {
         this.player = player;
         this.numberGenerator = new NumberGenerator(min, max);
         this.maxAttempts = maxAttempts;
-        this.scanner = new Scanner(System.in);
+        this.sc = new Scanner(System.in);
+        this.ux = new HelperUX();
+        this.help = false;
+        this.targetNumber = 0;
+
+    }
+    // For give hint to user it reduces 10 from target value and also add 10 to it
+    private int[] helperFunction(){
+        if (help){
+             int predict1 =  targetNumber- 10;
+            int predict2 = targetNumber + 10;
+            if(predict1 <10){
+                predict1 = 0;
+            }
+             return new int []{predict1,predict2};
+        }
+        return null;
 
     }
     public void setRound(int roundNumber){
-        int targetNumber = numberGenerator.generate();
+        targetNumber = numberGenerator.generate();
         int attempt = 0;
         boolean gessedCorrectly = false;
+        String helpHolder;
 
-        System.out.println("\n Round "+ roundNumber + " Gess the number! ");
+        System.out.println(ux.round+ roundNumber + ux.askToGess);
+        System.out.println(ux.line);
+        System.out.println(ux.asktoGessNum);
 
         while(attempt < maxAttempts) {
-            System.out.println("Include gessed number");
+            if(attempt > 3){
+                System.out.println(ux.provideHint);
+                helpHolder = sc.nextLine();
+                if(helpHolder.equals("Yes")){
+                    help = true;
+                    int helpnumber[] = helperFunction();
+                    System.out.println(ux.helpinggreet+ helpnumber[0]+ ", and  "+helpnumber[1]);
+                }
+                else if(helpHolder.equals("No")){
+                    continue;
+                }
+            }
+
             int guess;
 
             try{
-                guess = Integer.parseInt(scanner.nextLine());
+                guess = Integer.parseInt(sc.nextLine());
             }
             catch(NumberFormatException e){
-                System.out.println("Enter valid numaric value");
+                System.out.println(ux.onlyNumaric);
                 continue;
             }
             attempt++;
 
             if(guess < targetNumber){
-                System.out.println("Too low !");
+                System.out.println(ux.toolowPredict);
+                //System.out.println(targetNumber);
             }else if(guess > targetNumber){
-                System.out.println("Too high !");
+                System.out.println(ux.tooHightPredict);
             }else {
-                System.out.println("Congratulations! You guessed the number " + guess + " !");
+                System.out.println(ux.cong+ player.getName() +  ux.win + guess + " \uD83E\uDD73");
                 int point = 10 - attempt +1;
                 player.addScore(point);
-                System.out.println("Your point is "+point);
+                System.out.println(ux.pointValue+point);
                 gessedCorrectly = true;
                 break;
             }
         }
         if(!gessedCorrectly){
-            System.out.println("Out of attemps correct number is " + targetNumber + " !");
+            System.out.println(ux.outofAttempt + targetNumber + " !");
         }
-        System.out.println("\n Corrent Score is "+ player.getScore());
+        System.out.println(ux.cScore+ player.getScore());
     }
 
 }
