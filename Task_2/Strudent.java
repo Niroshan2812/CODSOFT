@@ -63,6 +63,7 @@ public class Strudent {
 
     // Result display
     public void resultSys(){
+        System.out.println();
         System.out.println("Result for: " + name);
 
         for (Subject s : subjects){
