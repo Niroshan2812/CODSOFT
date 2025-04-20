@@ -8,4 +8,8 @@ public class UXhelper {
     public String wdFail = "Withdrawal Fail, Insufficient ammount ";
     public String wdFailam = "Withdrawal Fail, invalid ammount ";
     public String accntAmount = "Current balance: Rs. ";
+
+    //single Variable
+    public String hoder = ("Account Holder: ");
+    public String accNumber = ("Account Number: ");
 }

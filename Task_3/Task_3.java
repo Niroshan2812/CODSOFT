@@ -20,6 +20,9 @@ public class Task_3 {
         System.out.println("\n");
         atm.performWithdraw(34000);
         atm.checkBalance();
+        System.out.println("\n");
+        atm.showAccountDetails();
+
 
 
 

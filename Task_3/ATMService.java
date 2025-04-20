@@ -26,6 +26,9 @@ public class ATMService {
     public void checkBalance() {
         System.out.println(ux.accntAmount + account.getBalance());
     }
-    
+    public void showAccountDetails(){
+      System.out.println(ux.hoder + account.getHolderName());
+      System.out.println(ux.accNumber + account.getAccountNo());
+    }
 
 }
