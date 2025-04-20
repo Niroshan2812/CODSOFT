@@ -15,13 +15,8 @@ public class Task_3 {
     */
         ATMService atm = new ATMService(bk);
 
-        atm.performDeposit(34000);
-        atm.checkBalance();
-        System.out.println("\n");
-        atm.performWithdraw(34000);
-        atm.checkBalance();
-        System.out.println("\n");
-        atm.showAccountDetails();
+      ATMview atmview = new ATMview(atm);
+      atmview.start();
 
 
 
