@@ -5,6 +5,8 @@ public class UXhelper{
     public String askbCurrancyCode = "Enter base currency code (Ex: LKR): ";
     public String asktCurrancyCode = "Enter target currency  code (Ex: USD): ";
     public String askAmout = "Enter amount to convert: ";
+    public String sparator = "\n";
+
 
 }
 

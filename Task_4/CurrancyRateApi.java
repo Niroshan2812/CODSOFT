@@ -32,7 +32,7 @@ public class CurrancyRateApi {
            }
            bf.close();
            con.disconnect();
-           System.out.println(response.toString());
+
 
            JSONObject obj = new JSONObject (response.toString());
            return obj.getJSONObject("conversion_rates").getDouble(targetCurranct.toUpperCase());

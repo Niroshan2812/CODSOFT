@@ -14,7 +14,19 @@ public class CurrancyConvert implements CurrancyConverter {
         double rate = currancyRateApi.exchanger(baseCurrancy,targetCurrancy);
         //multiply with exchange rate
         double convertedAmount = amount * rate;
-        Currency cr = new Currency(targetCurrancy, null);
+        Currency cr = new Currency(targetCurrancy, getCurrancySymbole(targetCurrancy));
         return new FinalResultContainner(convertedAmount, cr);
+    }
+
+    private String getCurrancySymbole(String currancy) {
+
+        return switch (currancy.toUpperCase()){
+            case "LKR" -> " RS. ";
+            case "USD" -> " $ ";
+            case "GBP" -> " £";
+            case "JPY" -> " ¥";
+            case "INR" -> " ₹";
+            default -> " ";
+        };
     }
 }
