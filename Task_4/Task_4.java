@@ -6,6 +6,8 @@ public class Task_4 {
     public static void main(String[] args) {
         //Asking
         UXhelper ux = new UXhelper();
+        CurrancyRateApi apiCall = new CurrancyRateApi();
+        CurrancyConverter converter = new CurrancyConvert(apiCall);
 
         Scanner sc = new Scanner(System.in);
 
@@ -20,12 +22,13 @@ public class Task_4 {
         double amount = sc.nextDouble();
 
         // Exchanger
-        CurrancyRateApi crp = new CurrancyRateApi();
-        double curr = crp.exchanger(baseCurrancy,targetCurrancy);
-
-
-
-
+        try{
+            FinalResultContainner result = converter.convert(baseCurrancy, targetCurrancy, amount);
+            System.out.println("Converted Amount: "+  result.getConvertedAmount());
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+    sc.close();
     }
 
     private void userASKING (){
