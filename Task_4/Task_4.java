@@ -4,6 +4,15 @@ import java.util.Scanner;
 
 public class Task_4 {
     public static void main(String[] args) {
+
+
+        CurrancyRateApi crp = new CurrancyRateApi();
+        double curr = crp.exchanger("USD","AED");
+        System.out.println(curr);
+
+    }
+
+    private void userASKING (){
         UXhelper ux = new UXhelper();
 
         Scanner sc = new Scanner(System.in);
@@ -17,9 +26,5 @@ public class Task_4 {
 
         System.out.println(ux.askAmout);
         double amount = sc.nextDouble();
-
-        
-
-
     }
 }
