@@ -14,6 +14,10 @@ public class ATMview {
 
     public void start(){
         int option;
+        System.out.println(ux.welcome);
+        System.out.println(ux.provideUserDetails);
+        atmService.showAccountDetails();
+
         do{
             displayMenu();
             option = sc.nextInt();
@@ -28,28 +32,28 @@ public class ATMview {
                 break;
 
                 case 2:
-                    System.out.println("Enter amount to deposit: ");
+                    System.out.println(ux.case1);
                     atmService.performDeposit(sc.nextDouble());
                     break;
 
                     case 3:
-                        System.out.println("Enter amount to withdraw: ");
+                        System.out.println(ux.case2);
                         atmService.performWithdraw(sc.nextDouble());
                         break;
 
                         case 4:
-                            System.out.println("Thank you for using our service ");
+                            System.out.println(ux.case3);
                             break;
 
                             default:
-                                System.out.println("Invalid option");
+                                System.out.println(ux.defaultCase);
 
 
         }
     }
 
     private void displayMenu(){
-        System.out.println(ux.welcome);
+        System.out.println(ux.mENU);
         System.out.println(ux.checkBlnce);
         System.out.println(ux.deposit);
         System.out.println(ux.withdraw);
