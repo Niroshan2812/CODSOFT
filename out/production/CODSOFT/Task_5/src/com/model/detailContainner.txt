@@ -1,0 +1,5 @@
+Student have -
+
+    name,
+    roll number,
+    grade,

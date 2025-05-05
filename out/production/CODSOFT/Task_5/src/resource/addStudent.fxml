@@ -3,12 +3,20 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane xmlns:fx="http://javafx.com/fxml" alignment="CENTER">
-<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml">
-    <Label text="Add New Student" style="-fx-font-size: 18px;" />
-    <TextField promptText="Student Name"/>
-    <TextField promptText="Student ID"/>
-    <TextField promptText="Course"/>
-    <Button text="Submit"/>
-</VBox>
+<StackPane xmlns:fx="http://javafx.com/fxml" alignment="CENTER" fx:controller="Task_5.src.com.controller.AddStudentController">
+    <VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1">
+        <Label text="Add a new Student"/>
+
+        <TextField fx:id = "rollField" promptText="Student id" disable="false"/>
+        <TextField fx:id="nameField" promptText="Name" disable="false"/>
+        <TextField fx:id="gradeField" promptText="Grade" disable="false"/>
+        <TextField fx:id = "contactField" promptText="Contact number" disable="false"/>
+        <TextField fx:id="emailField" promptText="Email" disable="false"/>
+
+        <HBox spacing="10">
+            <Button text="Save" onAction="#handleSave" fx:id="handleSave" disable="false"/>
+            <Button text="Close" onAction="#handleClose"/>
+        </HBox>
+        <Label fx:id = "messageLabel"/>
+    </VBox>
 </StackPane>

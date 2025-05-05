@@ -6,11 +6,13 @@ public class Student implements Serializable {
     private String name;
     private String rollNumber;
     private String grade;
+    private int contactNumber;
 
-    public Student(String name, String rollNumber, String grade) {
+    public Student(String name, String rollNumber, String grade,int contactNumber ) {
         this.name = name;
         this.rollNumber = rollNumber;
         this.grade = grade;
+        this.contactNumber = contactNumber;
     }
 
     public String getName() {
@@ -39,5 +41,13 @@ public class Student implements Serializable {
 
     public String toString() {
         return name +  " (" + rollNumber + ") - Grade: " + grade;
+    }
+
+    public int getContactNumber() {
+        return contactNumber;
+    }
+
+    public void setContactNumber(int contactNumber) {
+        this.contactNumber = contactNumber;
     }
 }
