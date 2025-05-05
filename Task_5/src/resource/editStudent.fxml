@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml" alignment="CENTER">
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1">
+    <Label text="Edit Student Details"/>
+
+    <HBox spacing="5">
+        <TextField fx:id="searchRollField" promptText="Enter Roll Number"/>
+        <Button text="Search" onAction="#handleSearch"/>
+    </HBox>
+    <TextField fx:id="nameField" promptText="Name" disable="true"/>
+    <TextField fx:id="gradeField" promptText="Grade" disable="true"/>
+
+    <HBox spacing="10">
+        <Button text="Edit" onAction="#handleEdit" fx:id="editBtn" disable="true"/>
+        <Button text="Clear" onAction="#handleClear"/>
+    </HBox>
+    <Label fx:id = "messageLabel"/>
+</VBox>
+</StackPane>
