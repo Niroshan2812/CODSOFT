@@ -7,12 +7,15 @@ public class Student implements Serializable {
     private String rollNumber;
     private String grade;
     private int contactNumber;
+    private String email;
 
-    public Student(String name, String rollNumber, String grade,int contactNumber ) {
+
+    public Student(String name, String rollNumber, String grade,int contactNumber, String email ) {
         this.name = name;
         this.rollNumber = rollNumber;
         this.grade = grade;
         this.contactNumber = contactNumber;
+        this.email = email;
     }
 
     public String getName() {
@@ -49,5 +52,11 @@ public class Student implements Serializable {
 
     public void setContactNumber(int contactNumber) {
         this.contactNumber = contactNumber;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
