@@ -1,5 +1,6 @@
 package Task_5.src.com.controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -21,8 +22,15 @@ private void handleSearch() {
     if(searchTerm.isEmpty()){
         messageLabel.setText("Please enter a search term");
     }
-    System.out.println(searchTerm);
-    ShowDetails.setText(searchTerm);
+
+
+}
+
+@FXML
+    private void backtoDashboard(ActionEvent event) {
+    DashboardController dashboard = new DashboardController();
+    dashboard.loadUI(event,"dashbord");
+
 
 }
 

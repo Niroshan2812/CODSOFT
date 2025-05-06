@@ -7,6 +7,10 @@
     <VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1">
         <Label text="Add a new Student"/>
 
+        <HBox spacing="5">
+            <Button text="Back" onAction="#backtoDashboard"/>
+        </HBox>
+
         <TextField fx:id = "rollField" promptText="Student id" disable="false"/>
         <TextField fx:id="nameField" promptText="Name" disable="false"/>
         <TextField fx:id="gradeField" promptText="Grade" disable="false"/>
@@ -15,7 +19,7 @@
 
         <HBox spacing="10">
             <Button text="Save" onAction="#handleSave" fx:id="handleSave" disable="false"/>
-            <Button text="Close" onAction="#handleClose"/>
+            <Button text="Close" />
         </HBox>
         <Label fx:id = "messageLabel"/>
     </VBox>

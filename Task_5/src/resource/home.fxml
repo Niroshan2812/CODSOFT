@@ -26,20 +26,6 @@
             <HBox layoutX="118.0" layoutY="60.0" prefHeight="340.0" prefWidth="480.0">
                <children>
                   <StackPane fx:id="centerBox" prefHeight="279.0" prefWidth="407.0" alignment="CENTER">
-                     <children>
-                        <GridPane hgap="20" vgap="20" alignment="CENTER">
-                           <children>
-                              <Button text="Add Student" onAction="#loadAddStudentView" prefHeight="81.0" prefWidth="134.0"
-                                      styleClass="card-button" GridPane.rowIndex="0" GridPane.columnIndex="0" />
-                              <Button text="Edit Student" onAction="#loadEditStudentView" prefHeight="81.0" prefWidth="134.0"
-                                      styleClass="card-button" GridPane.rowIndex="0" GridPane.columnIndex="1" />
-                              <Button text="Search Student" onAction="#loadSearchStudentView" prefHeight="81.0" prefWidth="134.0"
-                                      styleClass="card-button" GridPane.rowIndex="1" GridPane.columnIndex="0" />
-                              <Button text="View All Student" onAction="#loadViewAllStudentView" prefHeight="81.0" prefWidth="134.0"
-                                      styleClass="card-button" GridPane.rowIndex="1" GridPane.columnIndex="1" />
-                           </children>
-                        </GridPane>
-                     </children>
                   </StackPane>
                </children>
             </HBox>

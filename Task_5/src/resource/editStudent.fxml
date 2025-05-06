@@ -6,6 +6,7 @@
 <StackPane xmlns:fx="http://javafx.com/fxml" alignment="CENTER" fx:controller="Task_5.src.com.controller.EditStudentController">
 <VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1">
     <Label text="Edit Student Details"/>
+    <Button text = "Back" onAction="#backtoDashboard"/>
 
     <HBox spacing="5">
         <TextField fx:id="searchField" promptText="Enter Roll Number"/>
@@ -13,10 +14,13 @@
     </HBox>
     <TextField fx:id="nameField" promptText="Name" disable="true"/>
     <TextField fx:id="gradeField" promptText="Grade" disable="true"/>
+    <TextField fx:id="contactNumberField" promptText="Contact Number" disable="true"/>
+    <TextField fx:id="emailField" promptText="Email" disable="true"/>
+
 
     <HBox spacing="10">
         <Button text="Edit" onAction="#handleEdit" fx:id="editButton" disable="true"/>
-        <Button text="Clear" onAction="#handleClear"/>
+        <Button text="Clear" onAction="#printall"/>
     </HBox>
     <Label fx:id = "messageLabel"/>
 </VBox>

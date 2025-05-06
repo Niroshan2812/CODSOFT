@@ -6,6 +6,7 @@
 <StackPane xmlns:fx="http://javafx.com/fxml" alignment="CENTER" fx:controller="Task_5.src.com.controller.SearchStrudentController">
     <VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1">
         <Label text="Search Student details"/>
+        <Button text = "Back" onAction="#backtoDashboard"/>
 
         <HBox spacing="5">
             <TextField fx:id="searchField" promptText="Enter Roll Number"/>
