@@ -7,13 +7,15 @@
     <VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1">
         <Label text="All Student details"/>
         <Button text = "Back" onAction="#backtoDashboard"/>
-
-
-
-        <HBox spacing="10">
-            <Label fx:id = "ShowDetails"/>
-        </HBox>
-
+        <TableView fx:id="studentTable" prefWidth="600">
+            <columns>
+                <TableColumn fx:id="rollNumber" text="Roll Number"/>
+                <TableColumn fx:id="name" text="Name"/>
+                <TableColumn fx:id="grade" text="Grade"/>
+                <TableColumn fx:id="contactNumber" text="Contact Number"/>
+                <TableColumn fx:id="email" text="Email"/>
+            </columns>
+        </TableView>
         <Label fx:id = "messageLabel"/>
     </VBox>
 </StackPane>
