@@ -13,11 +13,7 @@
             <Button text="Search" onAction="#handleSearch"/>
         </HBox>
 
-
-
-        <HBox spacing="10">
-         <Label fx:id = "ShowDetails"/>
-        </HBox>
+        <TextArea fx:id="showDetails" editable="false" prefRowCount="6"/>
 
         <Label fx:id = "messageLabel"/>
     </VBox>
