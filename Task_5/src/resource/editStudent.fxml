@@ -3,14 +3,19 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane xmlns:fx="http://javafx.com/fxml" alignment="CENTER" fx:controller="Task_5.src.com.controller.EditStudentController">
+<StackPane xmlns:fx="http://javafx.com/fxml" alignment="CENTER"
+           fx:controller="Task_5.src.com.controller.EditStudentController"
+           stylesheets="/Task_5/src/resource/style.css">
 <VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1">
-    <Label text="Edit Student Details"/>
-    <Button text = "Back" onAction="#backtoDashboard"/>
+    <Label text=" 📝 Edit Student Details" styleClass="subtitileLable" />
+
+    <HBox spacing="5">
+        <Button text="Back" onAction="#backtoDashboard" styleClass="navButton"/>
+    </HBox>
 
     <HBox spacing="5">
         <TextField fx:id="searchField" promptText="Enter Roll Number"/>
-        <Button text="Search" onAction="#handleSearch"/>
+        <Button text="Search" onAction="#handleSearch" styleClass="searchButton"/>
     </HBox>
     <TextField fx:id="nameField" promptText="Name" disable="true"/>
     <TextField fx:id="gradeField" promptText="Grade" disable="true"/>
@@ -19,9 +24,9 @@
 
 
     <HBox spacing="10">
-        <Button text="Edit" onAction="#handleEdit" fx:id="editButton" disable="true"/>
-        <Button text="Clear" onAction="#printall"/>
+        <Button text="💾 Save" onAction="#handleEdit" fx:id="editButton" disable="true" styleClass="primaryButton"/>
+        <Button text="❌  Clear" onAction="#printall" styleClass="secondaryButton"/>
     </HBox>
-    <Label fx:id = "messageLabel"/>
+    <Label fx:id = "messageLabel" styleClass="messageLable"/>
 </VBox>
 </StackPane>

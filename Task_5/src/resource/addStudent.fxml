@@ -3,12 +3,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane xmlns:fx="http://javafx.com/fxml" alignment="CENTER" fx:controller="Task_5.src.com.controller.AddStudentController">
-    <VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1">
-        <Label text="Add a new Student"/>
+<StackPane xmlns:fx="http://javafx.com/fxml" alignment="CENTER"
+           fx:controller="Task_5.src.com.controller.AddStudentController"
+           stylesheets="/Task_5/src/resource/style.css">
+    <VBox spacing="15" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1">
+        <Label text="➕ Add a new Student" styleClass="subtitileLable"/>
 
         <HBox spacing="5">
-            <Button text="Back" onAction="#backtoDashboard"/>
+            <Button text="Back" onAction="#backtoDashboard" styleClass="navButton"/>
         </HBox>
 
         <TextField fx:id = "rollField" promptText="Student id" disable="false"/>
@@ -18,9 +20,9 @@
         <TextField fx:id="emailField" promptText="Email" disable="false"/>
 
         <HBox spacing="10">
-            <Button text="Save" onAction="#handleSave" fx:id="handleSave" disable="false"/>
-            <Button text="Close" />
+            <Button text="💾 Save" onAction="#handleSave" fx:id="handleSave" disable="false" styleClass="primaryButton"/>
+            <Button text=" ❌ Close" styleClass="secondaryButton"/>
         </HBox>
-        <Label fx:id = "messageLabel"/>
+        <Label fx:id = "messageLabel" styleClass="messageLable"/>
     </VBox>
 </StackPane>

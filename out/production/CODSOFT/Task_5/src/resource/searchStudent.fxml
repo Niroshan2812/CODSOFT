@@ -3,18 +3,22 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane xmlns:fx="http://javafx.com/fxml" alignment="CENTER" fx:controller="Task_5.src.com.controller.SearchStrudentController">
+<StackPane xmlns:fx="http://javafx.com/fxml" alignment="CENTER"
+           fx:controller="Task_5.src.com.controller.SearchStrudentController"
+           stylesheets="/Task_5/src/resource/style.css">
     <VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1">
-        <Label text="Search Student details"/>
-        <Button text = "Back" onAction="#backtoDashboard"/>
+        <Label text="🔍 Search Student details" styleClass="subtitileLable"/>
+        <HBox spacing="5">
+            <Button text="Back" onAction="#backtoDashboard" styleClass="navButton"/>
+        </HBox>
 
         <HBox spacing="5">
             <TextField fx:id="searchField" promptText="Enter Roll Number"/>
-            <Button text="Search" onAction="#handleSearch"/>
+            <Button text="Search" onAction="#handleSearch" styleClass="searchButton"/>
         </HBox>
 
         <TextArea fx:id="showDetails" editable="false" prefRowCount="6"/>
 
-        <Label fx:id = "messageLabel"/>
+        <Label fx:id = "messageLabel" styleClass="messageLable"/>
     </VBox>
 </StackPane>

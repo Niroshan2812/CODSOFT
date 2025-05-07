@@ -68,7 +68,7 @@ public class EditStudentController {
         searchField.clear();
         nameField.clear();
         gradeField.clear();
-        messageLabel.setText("");
+
     }
     private void releaseDisable(){
         nameField.setDisable(false);

@@ -1,5 +1,9 @@
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: #2c6566;
+}
 .header{
-    background-color: #f8f9fa;
+    background-color: #2c6566;
     padding: 20px;
     text-align: center;
 }
@@ -19,4 +23,78 @@
 .card-button:hover {
     -fx-background-color: #f0f0f0;
     -fx-cursor: hand;
+}
+.headerBox{
+    -fx-background-color: #2c3e50;
+    -fx-padding: 60;
+}
+.titileLable{
+    -fx-text-fill: white;
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+}
+.subtitileLable{
+
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+.messageLable{
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: italic;
+}
+.linex{
+    -fx-background-color: white;
+}
+
+.centerArea{
+    -fx-background-color: #265570;
+    -fx-padding: 30;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1;
+    -fx-border-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-opacity: 90%;
+
+}
+.primaryButton{
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-padding: 8 20;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+}
+.primaryButton:hover{
+    -fx-background-color: #2ecc71;
+}
+.secondaryButton{
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-padding: 8 20;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+}
+.secondaryButton:hover{
+    -fx-background-color: #c0392b;
+}
+.searchButton{
+    -fx-background-color: transparent;
+    -fx-text-fill: #409165;
+    -fx-font-weight: bold;
+    -fx-padding: 4 10;
+    -fx-background-radius: 5;
+}
+.searchButton:hover{
+    -fx-background-color: #b2e5c1;
+}
+.navButton{
+    -fx-background-color: transparent;
+    -fx-text-fill: #3498db;
+    -fx-font-weight: bold;
+    -fx-padding: 4 10;
+    -fx-background-radius: 5;
+}
+.navButton:hover{
+    -fx-background-color: #d6eaf8;
 }

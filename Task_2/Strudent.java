@@ -29,7 +29,8 @@ public class Strudent {
         if(subjects.isEmpty()){
             return 0;
         }
-        return (double) getTotalMarks() / subjects.size();
+        double average = (double) getTotalMarks() / subjects.size();
+        return Math.round(average*100.0)/100.0;
     }
 
     //Assigning Grade based on the avg marks

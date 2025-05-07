@@ -49,12 +49,12 @@ public class Game {
             if(attempt > 3){
                 System.out.println(ux.provideHint);
                 helpHolder = sc.nextLine();
-                if(helpHolder.equals("Yes")){
+                if(helpHolder.equalsIgnoreCase("Yes")){
                     help = true;
                     int helpnumber[] = helperFunction();
                     System.out.println(ux.helpinggreet+ helpnumber[0]+ ", and  "+helpnumber[1]);
                 }
-                else if(helpHolder.equals("No")){
+                else if(helpHolder.equalsIgnoreCase("No")){
                     continue;
                 }
             }

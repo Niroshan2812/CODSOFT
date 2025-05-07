@@ -3,10 +3,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane xmlns:fx="http://javafx.com/fxml" alignment="CENTER" fx:controller="Task_5.src.com.controller.ViewStudentDetails">
+<StackPane xmlns:fx="http://javafx.com/fxml" alignment="CENTER"
+           fx:controller="Task_5.src.com.controller.ViewStudentDetails"
+           stylesheets="/Task_5/src/resource/style.css">
     <VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1">
-        <Label text="All Student details"/>
-        <Button text = "Back" onAction="#backtoDashboard"/>
+        <Label text="📄 All Student details" styleClass="subtitileLable"/>
+        <HBox spacing="5">
+            <Button text="Back" onAction="#backtoDashboard" styleClass="navButton"/>
+        </HBox>
         <TableView fx:id="studentTable" prefWidth="600">
             <columns>
                 <TableColumn fx:id="rollNumber" text="Roll Number"/>
@@ -16,6 +20,6 @@
                 <TableColumn fx:id="email" text="Email"/>
             </columns>
         </TableView>
-        <Label fx:id = "messageLabel"/>
+        <Label fx:id = "messageLabel" styleClass="messageLable"/>
     </VBox>
 </StackPane>

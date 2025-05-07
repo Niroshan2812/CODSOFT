@@ -5,27 +5,34 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.GridPane?>
-<BorderPane fx:id="mainBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Task_5.src.com.controller.MainController" stylesheets="/Task_5/src/resource/style.css">
+<?import javafx.scene.control.TextField?>
+<BorderPane fx:id="mainBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            stylesheets="/Task_5/src/resource/style.css"
+            xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Task_5.src.com.controller.MainController">
    <center>
-      <Pane prefHeight="261.0" prefWidth="422.0" BorderPane.alignment="CENTER">
+      <Pane prefHeight="261.0" prefWidth="422.0" styleClass="headerBox" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="143.0" layoutY="14.0" text="Student Management System">
+            <Label layoutX="143.0" layoutY="14.0" styleClass="titileLable" text="Student Management System">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Line endX="215.0" layoutX="300.0" layoutY="49.0" startX="-213.0" />
-            <Line endX="100.0" layoutX="442.0" layoutY="49.0" startX="80.0" />
-            <Line endX="100.0" layoutX="-22.0" layoutY="49.0" startX="80.0" />
-            <HBox layoutX="118.0" layoutY="60.0" prefHeight="340.0" prefWidth="480.0">
+            <Line endX="215.0" layoutX="300.0" layoutY="49.0" startX="-213.0" stroke="WHITE"  />
+            <Line endX="100.0" layoutX="442.0" layoutY="49.0" startX="80.0" stroke="#c6b1b1" />
+            <Line endX="100.0" layoutX="-22.0" layoutY="49.0" startX="80.0" stroke="#c6b1b1" />
+
+
+            <HBox layoutX="118.0" layoutY="70.0" prefHeight="340.0" prefWidth="480.0" >
+
                <children>
-                  <StackPane fx:id="centerBox" prefHeight="279.0" prefWidth="407.0" alignment="CENTER">
+                  <StackPane fx:id="centerBox" alignment="CENTER"  prefHeight="279.0" prefWidth="407.0" styleClass="centerArea">
                   </StackPane>
                </children>
             </HBox>
